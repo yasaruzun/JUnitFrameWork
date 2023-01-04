@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import utilities.ReusableMethods;
 import utilities.TestBase;
 
 public class C06_JSExecutors extends TestBase {
@@ -24,9 +25,19 @@ public class C06_JSExecutors extends TestBase {
 
         jse.executeScript("arguments[0].click","sell");
 
-        WebElement goToCareerElement=driver.findElement(By.xpath("(//a[@class='elementskit-btn  whitespace--normal'])[5]"));
+        jse.executeScript("alert('Bu is bu kadar')");
+
+        ReusableMethods.bekleMethodu(3);
+
+
+
+        WebElement goToCareerElement= driver.findElement(By.xpath("//i[@class='fas fa-paper-plane']"));
+
 
         jse.executeScript("arguments[0].scrollIntoView();",goToCareerElement);
+
+
+        goToCareerElement.click();
 
 
     }

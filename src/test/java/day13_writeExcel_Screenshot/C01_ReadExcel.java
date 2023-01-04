@@ -20,7 +20,7 @@ public class C01_ReadExcel {
 
         Workbook workbook= WorkbookFactory.create(fis);
 
-        System.out.println(workbook.getSheet("Sayfa").getRow(3).getCell(1));
+        System.out.println(workbook.getSheet("Sayfa1").getRow(3).getCell(1));
 
         //satir ve sutun bilgisini parametre olarak alip
         //o hucredeki bilgiyi yazdiran bir method olusturun
@@ -35,7 +35,7 @@ public class C01_ReadExcel {
 
         Workbook workbook= WorkbookFactory.create(fis);
 
-        System.out.println(workbook.getSheet("Sayfa").getRow(satir).getCell(sutun));
+        System.out.println(workbook.getSheet("Sayfa1").getRow(satir).getCell(sutun));
 
 
     }
